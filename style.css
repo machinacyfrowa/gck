@@ -1,0 +1,111 @@
+/*
+Theme Name: Gdyńskie Centrum Kultury
+Author: Paweł Zawadzki
+Description: Szablin dedykowany dla strony Gdyńskiego Centrum Kultury
+Version: 0.0.1
+Tags: bootstrap
+*/
+
+body {
+	font-family: 'Lato', sans-serif;
+	font-size: 0.8125rem;
+}
+.navbar {
+	padding: 0;
+	background-color: black;
+}
+#navbarSupportedContent {
+	padding: 0;
+}
+.navbar-expand-md .navbar-nav {
+	margin-left:0;
+}
+nav a.nav-link {
+	color:white;
+	font-size: 0.75rem;
+	font-weight: bold;
+	text-transform: uppercase;
+}
+div.container > h1 {
+	padding-left:10%;
+	font-size: 2.75rem;
+	line-height: 10rem;
+}
+div.container > h3 {
+	padding-left:5%;
+	font-size: 1rem;
+	line-height: 8rem;
+	text-transform:uppercase;
+	font-weight:bold;
+}
+.left-border {
+	border-left: 1px solid black;
+}
+.metaslider .flexslider .slides img {
+	top:0;
+	left:0;
+	width: 50%;
+    height: 100%;
+	right: auto;
+}
+.metaslider div.caption-wrap {
+    right: 0px;
+    bottom: 0px;
+    width: 50%;
+    height: 100%;
+    left: auto;
+}
+.shadow, .metaslider  {
+	-webkit-box-shadow: 0px 10px 25px 0px rgba(0,0,0,0.75);
+	-moz-box-shadow: 0px 10px 25px 0px rgba(0,0,0,0.75);
+	box-shadow: 0px 10px 25px 0px rgba(0,0,0,0.75);
+}
+.tickets .details {
+	padding: 0 5% 0 5%;
+}
+.tickets .details h3 {
+	font-size: 1.75rem;
+}
+.tickets .details hr {
+	border-top: 5px solid black;
+}
+.tickets .details p {
+	font-size: 0.75rem;
+	font-weight: bold;
+}
+.note {
+	margin:11rem 0 11rem 0;
+}
+.note h3 {
+	padding: 0 5% 0 5%;
+	margin-bottom: 5rem;
+}
+
+.yellow-bg {
+	background-color:rgb(242,216,194);
+}
+.contact-row h1{
+	margin: 5rem 0 3rem;
+}
+.contact-row-images img {
+	margin-bottom: 5rem;
+}
+.bg-black{
+  color: white;
+  background-color: black;
+}
+/* Style all font awesome icons */
+.contact-row-images .fa {
+	padding:10px;
+	margin-right:10px;
+    font-size: 30px;
+	width: 50px;
+    text-align: center;
+    text-decoration: none;
+	color: black;
+	background-color:white;
+	border-radius: 50%;
+}
+.eu-logo {
+	margin-top:3rem;
+}
