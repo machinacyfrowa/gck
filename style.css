@@ -16,7 +16,42 @@ body {
 }
 #navbarSupportedContent {
 	padding: 0;
+
 }
+#menu-menu-glowne{
+	border-bottom: 1px solid rgba(255, 255, 255, 0.664);
+}
+#menu-item-52 > ul{
+	min-width:20rem;
+	padding: 1px 0px;
+	background-color: #000;
+}
+
+#menu-item-52 > ul > li {
+	float: left;
+}
+
+#menu-item-52 > ul > li > a {
+	padding: 0px 8px;
+	color: white;
+	font-weight: bold;
+	font-size: 0.75rem;
+}
+#menu-menu-glowne a:focus{
+	color: #db9750;
+}
+
+.dropdown-item:focus, .dropdown-item:hover {
+    color: #ffffff;
+    text-decoration: none;
+    background-color: #000000;
+}
+
+.dropdown-menu{
+
+	color: #ffffff;
+}
+
 .navbar-expand-md .navbar-nav {
 	margin-left:0;
 }
