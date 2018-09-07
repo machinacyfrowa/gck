@@ -1,10 +1,15 @@
+
+var timeout;
 $( window ).resize(function() {
-    graduation();
+    clearTimeout(timeout);
+    timeout = setTimeout(function() {
+      graduation();        
+    }, 200);
+
 });
 
 $( window ).ready(function() {
     graduation();
-
 });
 
 function graduation(){
