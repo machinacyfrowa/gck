@@ -1,0 +1,508 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Wydarzenie</title>
+    <!--CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/css/bootstrap.min.css" integrity="sha384-Smlep5jCw/wG7hdkwQ/Z5nLIefveQRIY9nfy6xoR1uRYBtpZgI6339F5dgvm/e9B" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="event.css">
+
+</head>
+<body>
+    <div id="allHTML">
+    <main role="main" class="container" id="mainRemoveContainer" >
+<!--TEATR-->     
+            <div class="row">
+                <h1 id="mainTitle" class="mt-5 ml-sm-5 mb-2">Teatr </h1>
+                <figcaption class="position-relative">
+                    <img id="mainImage" class="img-fluid" src="img/Konsternacja_web-1-e1535727273265.jpg" alt="" srcset="">
+                    <input id="deleteImageURL" class="centered form-control w-25" placeholder="Link do zdjęcia" type="url" >
+                    <input id="deleteImageALT" class="bottom-right form-control w-25" placeholder="Alt" type="text" >
+                </figcaption>
+            </div>
+            <div class="row shadow">
+                <div class="col-md-8 repertoire-left" >
+                    
+                        <div class="row no-gutters" id="deleteDropdownLeft">
+                            <!--dropdown-->
+                            <div class="dropdown col-sm-10 col-10 " >
+                                <button class="btn btn-primary dropdown-toggle button-radius-left w-100" type="button" id="triggerId" data-toggle="dropdown" aria-haspopup="true"
+                                        aria-expanded="false">
+                                            Dodaj Elmenet
+                                        </button>
+                                <div class="dropdown-menu w-100" aria-labelledby="triggerId">
+                                    <div class="container">
+                                        <div class="row">
+                                            <a class="dropdown-item  col-10" href="#" data-toggle="modal" data-target="#admissionModal"> Wstęp</a>  <button type="button" class="btn btn-outline-primary  col-2" onclick="exampleShow(1)" ><i class="far fa-eye"></i></button>
+                                        </div>
+                                        <div class="row">
+                                                <a class="dropdown-item  col-10" href="#" data-toggle="modal" data-target="#textModal"> Zwykły tekst</a>  <button type="button" class="btn btn-outline-primary  col-2" onclick="exampleShow(2)"><i class="far fa-eye"></i></button>
+                                        </div>
+                                        <div class="row">
+                                                <a class="dropdown-item  col-10" href="#" data-toggle="modal" data-target="#prizeModal"> Nagrody</a>  <button type="button" class="btn btn-outline-primary  col-2" onclick="exampleShow(3)"><i class="far fa-eye"></i></button>
+                                        </div>
+                                        <div class="row">
+                                                <a class="dropdown-item  col-10" href="#" data-toggle="modal" data-target="#quotationModal"  > Cytat</a>  <button type="button" class="btn btn-outline-primary col-2" onclick="exampleShow(4)"><i class="far fa-eye"></i></button>
+                                        </div>
+                                        <div class="row">
+                                                <a class="dropdown-item  col-10" href="#" data-toggle="modal" data-target="#youtubeModal"> YOUTUBE</a>  <button type="button" class="btn btn-outline-primary  col-2" onclick="exampleShow(5)"><i class="far fa-eye"></i></button>
+                                        </div>
+                                    </div>
+                                    <a class="dropdown-item" href="#" onclick="htmlAdd('l')">Własny Html</a> 
+                                </div>
+                            </div>
+                            <button class="btn btn-light col-sm-2 col-2" id="leftTrash">
+                                <i class="fas fa-trash-alt"></i>
+                            </button>
+                            <!--END dropdown-->
+                        </div>
+                    
+
+
+                    
+                </div>
+                <div class="col-md-4 yellow-bg repertoire-right">
+
+                    
+                    <div class="row no-gutters" id="deleteDropdownRight">
+                        <!--dropdown-->
+                        <div class="dropdown col-sm-9 col-10" >
+                                <button class="btn btn-primary dropdown-toggle w-100" style=" color: #fff; background-color: #007bff; border-color: #007bff;" type="button" id="trigger" data-toggle="dropdown" aria-haspopup="true"
+                                        aria-expanded="false">
+                                            Dodaj Elmenet
+                                        </button>
+                                <div class="dropdown-menu w-100" aria-labelledby="trigger">
+                                    <div class="container">
+                                        <div class="row">
+                                            <a class="dropdown-item  col-9" href="#" data-toggle="modal" data-target="#ticketModal"> Bilety</a>  <button type="button" style="margin: 0 !important;" class="btn btn-outline-primary col-3" onclick="exampleShow(6)" ><i class="far fa-eye"></i></button>
+                                        </div>
+                                        <div class="row">
+                                                <a class="dropdown-item  col-9" href="#" data-toggle="modal" data-target="#titleAndTextModal"> tytuł + tekst</a>  <button type="button" style="margin: 0 !important;" class="btn btn-outline-primary col-3" onclick="exampleShow(7)" ><i class="far fa-eye"></i></button>
+                                        </div>
+                                        <div class="row">
+                                                <a class="dropdown-item col-9" href="#" data-toggle="modal" data-target="#pictureModal"> tytuł + zdjecie</a>  <button type="button" style="margin: 0 !important;" class="btn btn-outline-primary col-3" onclick="exampleShow(8)" ><i class="far fa-eye"></i></button>
+                                        </div>
+                                        <div class="row">
+                                                <a class="dropdown-item  col-9" href="#" data-toggle="modal" data-target="#audioModal"> Audio</a>  <button type="button" style="margin: 0 !important;" class="btn btn-outline-primary col-3" onclick="exampleShow(9)" ><i class="far fa-eye"></i></button>
+                                        </div>
+                                    </div>
+                                    <a class="dropdown-item" href="#" onclick="htmlAdd('p')">Własny Html</a> 
+                                </div>
+                        </div>
+                        <button class="btn btn-light col-sm-3 col-2" id="rightTrash">
+                                <i class="fas fa-trash-alt"></i>
+                        </button>
+                        <!--END dropdown-->
+                    </div>
+                    
+
+                </div>
+
+            </div>
+    </main>
+<!--END TEATR-->  
+
+<!--Wydarzenia-->  
+<div class="container" id="removeContainer">
+
+            
+            <div class="row no-gutters mt-3" id="deleteDropdownMain">
+                <!--dropdown-->
+                <div class="dropdown col-sm-11 col-10" >
+                        <button class="btn btn-primary dropdown-toggle w-100" style=" color: #fff; background-color: #007bff; border-color: #007bff;" type="button" id="triggerMain" data-toggle="dropdown" aria-haspopup="true"
+                                aria-expanded="false">
+                                    Dodaj Elmenet
+                                </button>
+                        <div class="dropdown-menu w-100" aria-labelledby="triggerMain">
+                            <div class="container">
+                                <div class="row">
+                                    <a class="dropdown-item col-10" href="#" data-toggle="modal" data-target="#galleryModal"> Galeria</a>  <button type="button" style="margin: 0 !important;" class="btn btn-outline-primary col-2" onclick="exampleShow(10)" ><i class="far fa-eye"></i></button>
+                                </div>
+                                <div class="row">
+                                        <a class="dropdown-item col-10" href="#" data-toggle="modal" data-target="#reviewsModal">Recenzje</a>  <button type="button" style="margin: 0 !important;" class="btn btn-outline-primary col-2" onclick="exampleShow(11)" ><i class="far fa-eye"></i></button>
+                                </div>
+                            </div>
+                            <a class="dropdown-item" href="#" onclick="htmlAdd('m')">Własny Html</a> 
+                        </div>
+                </div>
+                <button class="btn btn-light col-sm-1 col-2" id="mainTrash"  >
+                        <i class="fas fa-trash-alt"></i>
+                </button>
+
+                <button class="btn btn-success btn-lg offset-2 col-8 mt-5" id="buttonEnd" onclick="endClick()" >
+                        KONIEC
+                </button>
+                <div class="col-2"></div>
+                <!--END dropdown-->
+            </div>
+            
+
+  
+</div>
+<!--END Wydarzenia-->  
+</div>
+
+
+
+    <!--MODAL example-->  
+    <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog"  aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">Przykładowy widok</h5>
+                <button type="button" onclick="$('#exampleModal .modal-body').empty()" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+
+            </div>
+            </div>
+        </div>
+    </div>
+    <!--END MODAL example-->  
+
+    <!--MODAL admission-->  
+    <div class="modal fade" id="admissionModal" tabindex="-1" role="dialog"  aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">Wstęp</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <input class="form-control " id="admissionInputOne" placeholder="Tytuł (pierwszy)" type="text" >
+                <input class="form-control mt-2" id="admissionInputTwo" placeholder="Tytuł (drugi)" type="text" >
+                <textarea class="form-control mt-2" id="admissionTextareaThree" placeholder="Tekst" rows="5" id="comment"></textarea>
+            </div>
+            <div class="modal-footer">
+                    <button type="button" class="btn btn-primary" data-dismiss="modal" onclick="admissionAdd()">OK</button>
+            </div>
+            </div>
+        </div>
+    </div>
+    <!--END MODAL admission-->  
+
+    <!--MODAL TEXT-->  
+    <div class="modal fade" id="textModal" tabindex="-1" role="dialog"  aria-hidden="true">
+        <div class="modal-dialog modal-lg" role="document">
+            <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">Zwykły tekst</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <textarea class="form-control mt-2" id="textTextarea" placeholder="Tekst" rows="5" id="comment"></textarea>
+            </div>
+            <div class="modal-footer">
+                    <button type="button" class="btn btn-primary" data-dismiss="modal" onclick="textAdd()">OK</button>
+            </div>
+            </div>
+        </div>
+    </div>
+    <!--END MODAL TEXT-->  
+
+    <!--MODAL prize-->  
+    <div class="modal fade" id="prizeModal" tabindex="-1" role="dialog"  aria-hidden="true">
+        <div class="modal-dialog " role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Nagrody</h5>
+                    <button type="button" class="close" data-dismiss="modal" onclick="prizeClearModal()" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <input class="form-control" placeholder="Tytuł"  type="text" >
+                    <input class="form-control mt-2 "  placeholder="Opis" type="text" >
+                    <button type="button" id="prizeButton" class="btn btn-primary mt-2" onclick="prizeAddModal()" >Dodaj</button>
+                </div>
+                <div class="modal-footer">
+                        <button type="button" class="btn btn-primary" data-dismiss="modal" onclick="prizeAdd()">OK</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--END MODAL prize-->  
+
+    <!--MODAL Quotation-->  
+    <div class="modal fade" id="quotationModal" tabindex="-1" role="dialog"  aria-hidden="true">
+        <div class="modal-dialog " role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Cytat</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                        <textarea class="form-control mt-2" id="quotationTextarea" placeholder="Tekst" rows="5" id="comment"></textarea>
+                </div>
+                <div class="modal-footer">
+                        <button type="button" class="btn btn-primary" data-dismiss="modal" onclick="quotationAdd()" >OK</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--END MODAL Quotation-->  
+
+    <!--MODAL YOUTUBE-->  
+    <div class="modal fade" id="youtubeModal" tabindex="-1" role="dialog"  aria-hidden="true">
+        <div class="modal-dialog " role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">YOUTUBE</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <input class="form-control" id="youtubeInputOne" placeholder="Tytuł"  type="text" >
+                    <input class="form-control mt-2 " id="youtubeInputTwo"  placeholder="Link" type="text" >
+                </div>
+                <div class="modal-footer">
+                        <button type="button" class="btn btn-primary" data-dismiss="modal" onclick="youtubeAdd()" >OK</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--END MODAL Quotation-->  
+
+
+
+    <!--MODAL TICKET-->  
+    <div class="modal fade" id="ticketModal" tabindex="-1" role="dialog"  aria-hidden="true">
+        <div class="modal-dialog " role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Bilety</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <input class="form-control" id="ticketInputOne" value="KUP BILET"  type="text" >
+                    <input class="form-control mt-2 " id="ticketInputTwo"  placeholder="Link" type="text" >
+                </div>
+                <div class="modal-footer">
+                        <button type="button" class="btn btn-primary" data-dismiss="modal" onclick="ticketAdd()" >OK</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--END MODAL TICKET-->  
+
+    <!--MODAL TICKET-->  
+    <div class="modal fade" id="titleAndTextModal" tabindex="-1" role="dialog"  aria-hidden="true">
+        <div class="modal-dialog " role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title"> Tytuł + Tekst</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <input class="form-control" id="titleAndTextInputOne" placeholder="Tytuł"  type="text" >
+                    <textarea class="form-control mt-2" id="titleAndTextTextarea" placeholder="Tekst" rows="5" id="comment"></textarea>
+                    <span class="mt-2">Margines górny</span>
+                    <select class="form-control " id="titleAndTextSelect">
+                            <option value="0">0</option>
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
+                    </select>
+                </div>
+                <div class="modal-footer">
+                        <button type="button" class="btn btn-primary" data-dismiss="modal" onclick="titleAndTextAdd()" >OK</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--END MODAL TICKET-->  
+
+    <!--MODAL PICTURE-->  
+    <div class="modal fade" id="pictureModal" tabindex="-1" role="dialog"  aria-hidden="true">
+        <div class="modal-dialog " role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Tytuł + Zdjęcie</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <input class="form-control" id="pictureInputOne" placeholder="Tytuł"  type="text" >
+                    <input class="form-control mt-2 " id="pictureInputTwo"  placeholder="Link" type="text" >
+                    <input class="form-control mt-2 " id="pictureInputThree"  placeholder="Alt" type="text" >
+                </div>
+                <div class="modal-footer">
+                        <button type="button" class="btn btn-primary" data-dismiss="modal" onclick="pictureAdd()" >OK</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--END MODAL PICTURE-->  
+    <!--MODAL AUDIO-->  
+    <div class="modal fade" id="audioModal" tabindex="-1" role="dialog"  aria-hidden="true">
+        <div class="modal-dialog " role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Audio</h5>
+                    <button type="button" onclick="audioClearModal()" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <input class="form-control"  placeholder="Link"  type="text" >
+                    <input class="form-control mt-2 "  placeholder="Tytuł" type="text" >
+                    <button type="button" class="btn btn-primary mt-2" id="audioButton" onclick="audioAddModal()" >Dodaj</button>
+                </div>
+                <div class="modal-footer">
+                        <button type="button" class="btn btn-primary"  data-dismiss="modal" onclick="audioAdd()" >OK</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--END MODAL AUDIO-->  
+
+    <!--MODAL GALLERY-->  
+    <div class="modal fade" id="galleryModal" tabindex="-1" role="dialog"  aria-hidden="true">
+        <div class="modal-dialog " role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Zwykły tekst</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <input class="form-control" id="gallery1"  placeholder="Tytuł"  type="text" >
+                    <input class="form-control mt-2 " id="gallery2"  placeholder="Link" type="text" >
+                    <input class="form-control mt-2 " id="gallery3"  placeholder="Alt" type="text" >
+                    <input class="form-control mt-2 " id="gallery4" placeholder="Link" type="text" >
+                    <input class="form-control mt-2 " id="gallery5" placeholder="Alt" type="text" >
+                    <input class="form-control mt-2 " id="gallery6" placeholder="Link" type="text" >
+                    <input class="form-control mt-2 " id="gallery7" placeholder="Alt" type="text" >
+                    <input class="form-control mt-2 " id="gallery8" placeholder="Link" type="text" >
+                    <input class="form-control mt-2 " id="gallery9" placeholder="Alt" type="text" >
+                </div>
+                <div class="modal-footer">
+                        <button type="button" class="btn btn-primary"  data-dismiss="modal" onclick="galleryAdd()" >OK</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--END MODAL GALLERY--> 
+
+    <!--MODAL REVIEWS-->  
+
+    <div class="modal fade" id="reviewsModal" tabindex="-1" role="dialog"  aria-hidden="true">
+        <div class="modal-dialog " role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Zwykły tekst</h5>
+                    <button type="button" onclick="reviewsClearModal()" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <textarea class="form-control mt-2" placeholder="Tekst" rows="5" ></textarea>
+                    <input class="form-control"  placeholder="Tytuł"  type="text" >
+                    <button type="button" class="btn btn-primary mt-2" id="reviewsButton" onclick="reviewsAddModal()" >Dodaj</button>
+                </div>
+                <div class="modal-footer">
+                        <button type="button" class="btn btn-primary"  data-dismiss="modal" onclick="reviewsAdd()" >OK</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--END MODAL REVIEWS-->  
+
+    <!--MODAL HTML-->  
+
+    <div class="modal fade" id="htmlModal" tabindex="-1" role="dialog"  aria-hidden="true">
+            <div class="modal-dialog modal-lg" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title">HTML</h5>
+                        <button type="button" class="close"  data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <textarea class="form-control mt-2" id="htmlTextarea" data-type="editor" rows="20" ></textarea>
+                        <div class="btn-group mt-2" role="group" >
+                            <button type="button" class="btn btn-secondary" onclick='$("#htmlTextarea").val( $("#htmlTextarea").val() +"<h1> Twój tekst </h1> \n");' ><h1>h1</h1></button>
+                            <button type="button" class="btn btn-secondary" onclick='$("#htmlTextarea").val( $("#htmlTextarea").val() +"<h2> Twój tekst </h2> \n");'><h2>h2</h2></button>
+                            <button type="button" class="btn btn-secondary" onclick='$("#htmlTextarea").val( $("#htmlTextarea").val() +"<h3> Twój tekst </h3> \n");'><h3>h3</h3></button>
+                            <button type="button" class="btn btn-secondary" onclick='$("#htmlTextarea").val( $("#htmlTextarea").val() +"<h4> Twój tekst </h4> \n");'><h4>h4</h4></button>
+                            <button type="button" class="btn btn-secondary" onclick='$("#htmlTextarea").val( $("#htmlTextarea").val() +"<h5> Twój tekst </h5> \n");'><h5>h5</h5></button>
+                            <button type="button" class="btn btn-secondary" onclick='$("#htmlTextarea").val( $("#htmlTextarea").val() +"<h6> Twój tekst </h6> \n");'><h5>h6</h6></button>
+                        </div>
+                        <div class="btn-group ml-sm-3 mt-sm-0 mt-3" role="group" >
+                                <button type="button" class="btn btn-secondary" onclick='$("#htmlTextarea").val( $("#htmlTextarea").val() +"<p> Twój tekst </p> \n");'><p>p</p></button>
+                                <button type="button" class="btn btn-secondary" onclick='$("#htmlTextarea").val( $("#htmlTextarea").val() +"<strong> Twój tekst </strong> \n");'><strong>strong</strong></button>
+                                <button type="button" class="btn btn-secondary" onclick='$("#htmlTextarea").val( $("#htmlTextarea").val() +"<u> Twój tekst </u> \n");'><u>u</u></button>
+                                <button type="button" class="btn btn-secondary" onclick='$("#htmlTextarea").val( $("#htmlTextarea").val() +"<hr> \n");'>podkreślinie</button>
+                                <button type="button" class="btn btn-secondary" onclick='$("#htmlTextarea").val( $("#htmlTextarea").val() +"<br> \n");'>nowa linia</button>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                            <button type="button" class="btn btn-primary" id="htmlButton" data-dismiss="modal" >OK</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!--END MODAL HTML-->  
+    
+    <!--MODAL END-->  
+
+    <div class="modal fade" id="endModal" tabindex="-1" role="dialog"  aria-hidden="true">
+        <div class="modal-dialog modal-lg" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Twój piękny kod html </h5>
+                    <button type="button" class="close" onclick="comeBack()" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <textarea class="form-control mt-2" id="endTextarea" rows="20" ></textarea>
+                </div>
+                <div class="modal-footer">
+                        <button type="button" class="btn btn-primary" onclick="comeBack()"  data-dismiss="modal" >OK</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!--END MODAL END-->  
+
+
+
+    <!--JS-->
+    <script
+    src="https://code.jquery.com/jquery-3.3.1.min.js"
+    integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+    crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/js/bootstrap.min.js" integrity="sha384-o+RDsa0aLu++PJvFqy8fFScvbHFLtbvScb8AjopnFD+iEQ7wo/CG0xlczd+2O/em" crossorigin="anonymous"></script>
+    <script src="gen.js"></script>
+
+</body>
+</html>

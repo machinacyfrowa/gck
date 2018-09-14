@@ -1,0 +1,113 @@
+.repertoire-right{
+    padding: 6rem 3rem 8rem 3rem;
+}
+.repertoire-right > h6{
+    font-weight: bold;
+    letter-spacing: 0.2rem;
+}
+.repertoire-right button {
+    margin-top: .5rem!important;
+    color: #212529;
+    background-color: #f8f9fa;
+    border-color: #f8f9fa;
+}
+
+.repertoire-left
+{
+    padding: 6rem 3rem 8rem 6rem;
+}
+.repertoire-left hr{
+    border-top: 5px solid black;
+    margin: 2rem 0 3rem 0;
+}
+.repertoire-left .repertoire-prize{
+    text-align: center;
+}
+.repertoire-left .repertoire-prize h6{
+    letter-spacing: 0.2rem;
+    font-weight: 900;
+}
+.repertoire-left .repertoire-prize hr{
+    border-top: 2px solid rgba(0, 0, 0, 0.664);
+    margin: 2rem 0 1rem 0;
+}
+.repertoire-left .repertoire-prize hr:last-child{
+    margin: 1rem 0 2rem 0;
+}
+.repertoire-left .repertoire-title{
+    padding: 0 20% 0 0;
+
+}
+.repertoire-left p {
+    word-break: break-all;
+}
+.repertoire-reviews{
+    padding: 0 30% 0 10%;
+}
+.repertoire-reviews hr {
+    border-top: 5px solid rgba(255, 255, 255);
+    margin: 2.5rem 0 2.5rem 0;
+}
+
+.repertoire-photos .carousel-indicators{
+    justify-content: flex-end; 
+    right: -10%; 
+}
+.repertoire-photos li {
+    border-radius: 100%;
+    width: 15px;
+    height: 15px;
+    background-color: white;
+}
+.repertoire-photos .active {
+    background-color: rgb(200,150,85);
+}
+
+.repertoire-photos span {
+    color:  rgb(200,150,85);
+    font-size: 2.2rem;
+}
+
+
+@media screen and (max-width: 1021px) {
+    .repertoire-left
+    {
+        padding: 6rem 3rem 8rem 3rem;
+    }
+
+    .repertoire-right
+    {
+        padding: 6rem 1.5rem 8rem 1.5rem;
+    }
+}   
+
+@media screen and (max-width: 760px) {
+    .repertoire-right
+    {
+        padding: 6rem 3rem 8rem 3rem;
+    }
+}   
+/*RENDER*/
+.centered {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.bottom-right {
+    position: absolute;
+    bottom: 8px;
+    right: 16px;
+}
+
+.button-radius-left {
+    border-radius: .25rem 0 0 .25rem;
+}
+
+.button-radius-right {
+    border-radius: 0 .25rem  .25rem  0;
+}
+
+.dropdown .dropdown-menu .dropdown-item:active, .dropdown .dropdown-menu .dropdown-item:hover{background-color: #a39f9f !important;}
+.dropdown .dropdown-menu .dropdown-item:hover:last-child{background-color: #dd462e !important;}
