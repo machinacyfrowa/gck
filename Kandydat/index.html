@@ -30,46 +30,82 @@
     <!--MENU-->
     <div class="container">
         <div class="row">
-            <div class="col-sm-4 ">
-                <h3>Menu</h3>
-                <p>W skrócie</p>
+            <div class="col-md-3 col-sm-4 ">
+                <h3>W skrócie</h3>
                 <div class="list-group" id="tabListMain" role="tablist">
-                    <a class="list-group-item list-group-item-action active" data-toggle="list" href="#list-1" role="tab" aria-controls="home">O mnie</a>
-                    <a class="list-group-item list-group-item-action"  data-toggle="list" href="#list-2" role="tab" aria-controls="profile">Profil</a>
-                    <a class="list-group-item list-group-item-action"  data-toggle="list" href="#list-3" role="tab" aria-controls="messages">Propozycje</a>
-                    <a class="list-group-item list-group-item-action" data-toggle="list" href="#list-4" role="tab" aria-controls="settings">Szczegóły</a>
+                    <a class="list-group-item list-group-item-action active" data-toggle="list" href="#list-1" role="tab" onclick="which(0)" aria-controls="home">O mnie</a>
+                    <a class="list-group-item list-group-item-action"  data-toggle="list" href="#list-2" role="tab" onclick="which(1)" aria-controls="profile">Profil</a>
+                    <a class="list-group-item list-group-item-action"  data-toggle="list" href="#list-3" role="tab" onclick="which(2)" aria-controls="messages">Propozycje</a>
+                    <a class="list-group-item list-group-item-action" data-toggle="list" href="#list-4" role="tab" onclick="which(3)" aria-controls="settings">Szczegóły</a>
                 </div>
             </div>
-            <div class="col-sm-8 ">
+            <div class="col-md-9 col-sm-8 d-sm-block d-none">
                 <div class="tab-content">
                     <div class="tab-pane fade show active" id="list-1" role="tabpanel" aria-labelledby="list-home-list">
-                        <h1 class="text-center mt-5">O mnie</h1>
+                        <h1 class="text-center mt-3">O mnie</h1>
                         <p >Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto perspiciatis reprehenderit vero! Doloribus voluptates officia, repudiandae in adipisci alias deserunt quis et beatae inventore excepturi laborum ad impedit, incidunt fugit?</p>
                         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam impedit recusandae neque assumenda consequatur quibusdam doloribus quidem illo laudantium, minima, eos laboriosam officia. Quibusdam beatae, laboriosam expedita totam ut assumenda!</p>
                     </div>
                     <div class="tab-pane fade" id="list-2" role="tabpanel" aria-labelledby="list-profile-list">
-                        <h1 class="text-center mt-5">Profil</h1>
+                        <h1 class="text-center mt-3">Profil</h1>
                         <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Reiciendis beatae laudantium quod magni et, nesciunt autem, aliquid illum debitis, nisi earum id iusto omnis quasi aspernatur perspiciatis placeat voluptatibus quas.</p>
                         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci in repellat consectetur illum iure minima, aut nesciunt eveniet saepe libero culpa unde odio nulla tempore maxime harum? Debitis, tempore accusamus.</p>
 
                     </div>
                     <div class="tab-pane fade" id="list-3" role="tabpanel" aria-labelledby="list-messages-list">
-                            <h1 class="text-center mt-5">Propozycje</h1>
+                            <h1 class="text-center mt-3">Propozycje</h1>
                             <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Reiciendis beatae laudantium quod magni et, nesciunt autem, aliquid illum debitis, nisi earum id iusto omnis quasi aspernatur perspiciatis placeat voluptatibus quas.</p>
                             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci in repellat consectetur illum iure minima, aut nesciunt eveniet saepe libero culpa unde odio nulla tempore maxime harum? Debitis, tempore accusamus.</p>                    </div>
                     <div class="tab-pane fade" id="list-4" role="tabpanel" aria-labelledby="list-settings-list">
-                            <h1 class="text-center mt-5">Szczegóły</h1>
+                            <h1 class="text-center mt-3">Szczegóły</h1>
                             <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Reiciendis beatae laudantium quod magni et, nesciunt autem, aliquid illum debitis, nisi earum id iusto omnis quasi aspernatur perspiciatis placeat voluptatibus quas.</p>
                             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci in repellat consectetur illum iure minima, aut nesciunt eveniet saepe libero culpa unde odio nulla tempore maxime harum? Debitis, tempore accusamus.</p>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
+
     <!--END MENU-->
 
+    <!--Carouse-->
+        <div id="carouselId" class="carousel slide mt-5" data-ride="carousel" data-interval="false">
+
+            <div class="carousel-inner" role="listbox">
+                <div class="carousel-item active ">
+                    <div class="Text-Box">
+                        <h3 class="text-center display-3">O mnie</h3>
+                        <img src="img/ANNA MARIA MOTYL 1.jpg" class="img-fluid" alt="ANNA MARIA MOTYL" srcset="">
+                        <p></p>
+                        <h5>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem blanditiis laborum vel sapiente soluta similique ea, quis doloremque amet, quae expedita beatae adipisci repellat laboriosam error? Pariatur est soluta perferendis.</h5>
+                        <br>
+                        <p class="lead">Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis magnam, libero consequuntur velit laborum eligendi doloribus laboriosam sequi ratione quasi maiores facilis, ab qui omnis perspiciatis aliquid deleniti porro quis?</p>
+                        <p class="lead">Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis magnam, libero consequuntur velit laborum eligendi doloribus laboriosam sequi ratione quasi maiores facilis, ab qui omnis perspiciatis aliquid deleniti porro quis?</p>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <div class="Text-Box">
+                        <h3>Profil</h3>
+                        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Repellat, doloremque exercitationem recusandae aliquam totam dolor, quae eligendi ex doloribus expedita vero, itaque ipsa voluptatibus iste nihil modi magnam accusantium inventore.</p>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <div class="Text-Box">
+                        <h3>Propozycje</h3>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eveniet, maxime dolorem. Exercitationem sapiente tempora odit. Officiis iste blanditiis reprehenderit, molestiae soluta sapiente porro, animi facilis esse numquam ullam! Unde, culpa!</p>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <div class="Text-Box">
+                        <h3>Szczegóły</h3>
+                        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nulla corrupti inventore, vero fugiat ad laudantium sint quae reprehenderit doloribus magni accusantium magnam ut, mollitia aperiam. Natus beatae consectetur animi tempora.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    <!--End Carouse-->
+
     <!--WALL-->
-    <div class="container">
         <div class="jumbotron mt-5">
             <div class="container">
                 <h1 class="display-5">Pytania</h1>
@@ -89,7 +125,6 @@
             </div>
         </div>
     </div>
-    
     <!--END WALL-->
 
     <!-- Footer -->
@@ -149,5 +184,6 @@
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/js/bootstrap.min.js" integrity="sha384-o+RDsa0aLu++PJvFqy8fFScvbHFLtbvScb8AjopnFD+iEQ7wo/CG0xlczd+2O/em" crossorigin="anonymous"></script>
+    <script src="sc.js"></script>
   </body>
 </html>
