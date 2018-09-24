@@ -40,7 +40,7 @@ Tags: bootstrap
 
 #imageBackground{
     background-image: url("img/IMG_9729.jpg");
-    background-position: center;
+    background-position: bottom;
     background-size: cover;
     background-repeat: no-repeat;
     background-blend-mode:luminosity;
@@ -52,11 +52,12 @@ Tags: bootstrap
 @media only screen and (max-width: 1160px) {
     #imageBackground{
         background-image: url("img/WDG_znak_RGB_biale_tlo1.jpg");
-        background-blend-mode:unset;
+        background-blend-mode:normal;
         background-size: auto;
-        background-repeat: repeat-x;
+        background-repeat: space;
         height:100%;
         width: auto;
+        background-color: #950505;
     }
     .text-yellow{
         color: black!important;
