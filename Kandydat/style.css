@@ -43,10 +43,32 @@ Tags: bootstrap
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
+    background-blend-mode:luminosity;
+    background-attachment: local;
     height: 100%;
+    width: 100%;
 }
 
+@media only screen and (max-width: 1160px) {
+    #imageBackground{
+        background-image: url("img/WDG_znak_RGB_biale_tlo1.jpg");
+        background-blend-mode:unset;
+        background-size: auto;
+        background-repeat: repeat-x;
+        height:100%;
+        width: auto;
+    }
+    .text-yellow{
+        color: black!important;
+    }
+}
+
+
 /* TEXT */
+.text-yellow{
+    color: var(--main-red-color)
+}
+
 .Text-Box{
     padding: 50px 15%;
     background-color: #e9ecef; 
